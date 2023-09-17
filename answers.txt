@@ -55,3 +55,15 @@ SELECT companies.name , employees.Role
 from companies
 INNER JOIN employees on companies.ID=employees.ID)
 SELECT name from joined where Role = "Graphic Designer";
+
+
+SELECT MAX(points) from students;
+SELECT name from students where points = 500;
+
+SELECT AVG(points) FROM students;
+
+SELECT count(name) FROM students WHERE points = 500;
+
+SELECT name from students where name like '%s%';
+
+SELECT name from students ORDER BY points DESC;
