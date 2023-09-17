@@ -17,15 +17,3 @@ update students
 set points = points - 100 
 where ID = 1;  
 
-
-
-
-INSERT INTO graduates (ID , name , Age , Gender , points)
-SELECT * from students
-WHERE ID = 4;
-
-update graduates
-set Graduation = "08/09/2018"
-where name= "Layal";
-
-DELETE from students where name = "Layal";

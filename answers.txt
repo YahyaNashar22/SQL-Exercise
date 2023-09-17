@@ -29,3 +29,29 @@ set Graduation = "08/09/2018"
 where name= "Layal";
 
 DELETE from students where name = "Layal";
+
+////////////////////////////////
+CREATE TABLE "employeesV2"(
+"ID" INTEGER,
+"Name" TEXT,
+"CompanyName" TEXT,
+"CompanyDate" TEXT);
+///////////////////////////////////
+
+SELECT employees.Name , Companies.Name , companies.Date
+FROM employees
+INNER JOIN companies ON employees.ID = companies.ID;
+
+
+WITH joined AS (
+SELECT employees.Name , Companies.Name , companies.Date
+FROM employees
+INNER JOIN companies 
+ON employees.ID = companies.ID)
+SELECT name from joined where Date<2000;
+
+WITH Joined AS (
+SELECT companies.name , employees.Role
+from companies
+INNER JOIN employees on companies.ID=employees.ID)
+SELECT name from joined where Role = "Graphic Designer";
